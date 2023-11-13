@@ -202,7 +202,7 @@ ipywidgets==8.0.2
 iso8601==1.1.0
 isodate==0.6.1
 itsdangerous==2.1.2
-ivy-core==1.1.10
+# ivy-core==1.1.10
 jaraco.classes==3.2.3
 jax==0.4.6
 jaxlib==0.4.6
