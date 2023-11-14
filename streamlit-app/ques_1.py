@@ -18,6 +18,7 @@ agent_executor = create_sql_agent(
 )
 
 
+@st.cache_resource
 def driver1(industry_type):
     response = agent_executor.run(
         "What are the customers in"

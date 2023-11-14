@@ -9,7 +9,8 @@ from langchain.prompts import PromptTemplate
 from langchain import hub
 
 
-def driver2(customer_name):
+@st.cache_resource
+def main():
     loader = CSVLoader(file_path="./output.csv")
     data = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
@@ -38,6 +39,11 @@ def driver2(customer_name):
         | rag_prompt_custom
         | llm
     )
+    return rag_chain
+
+
+def driver2(customer_name):
+    rag_chain = main()
     response = rag_chain.invoke(
         "Can you tell me more about customer"
         + customer_name
