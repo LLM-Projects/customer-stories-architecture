@@ -11,7 +11,7 @@ from langchain import hub
 
 @st.cache_resource
 def main():
-    loader = CSVLoader(file_path="streamlit-app/output.csv")
+    loader = CSVLoader(file_path="output.csv")
     data = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
     splits = text_splitter.split_documents(data)
