@@ -2,3 +2,5 @@
 env.py
 __pycache__
 .vscode
+streamlit-app
+venv
